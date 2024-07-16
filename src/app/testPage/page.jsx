@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Animation from "@/components/Animation";
-
 import coasterRoller from "@/../public/coasterRoller.jpg";
 
-//import the popover demo component
-import PopoverDemo from "@/components/PopoverDemo";
-import { Toast } from "@radix-ui/react-toast";
-import ToastComponent from "@/components/Toast";
-
-export default function Home() {
+export default function TestPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Coaster Rollers</h1>
@@ -19,8 +13,7 @@ export default function Home() {
         width={500}
         height={200}
       ></Image>
-      <PopoverDemo />
-      <ToastComponent />
+
       <Image
         alt="coaster roller"
         src={coasterRoller}
@@ -29,15 +22,3 @@ export default function Home() {
     </main>
   );
 }
-
-// in next.config.mjs file:
-// images: {
-//     remotePatterns: [
-//       {
-//         protocol: "https",
-//         hostname: "images.unsplash.com",
-//         port: "",
-//         pathname: "**",
-//       },
-//     ],
-//   },

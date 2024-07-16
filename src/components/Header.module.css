@@ -1,0 +1,12 @@
+.h1 {
+  color: peru;
+  font-size: 2rem;
+}
+
+.nav {
+  color: papayawhip;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

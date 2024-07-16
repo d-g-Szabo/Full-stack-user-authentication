@@ -3,6 +3,8 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+// import ClerkProvider to wrap my pages, so all pages have acces to clerk
+import { ClerkProvider } from "@clerk/nextjs";
 
 // configure the font properties
 const inter = Inter_Tight({
@@ -18,13 +20,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/* add the font to the body tag */}
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    // wrap the children in the ClerkProvider
+    <ClerkProvider>
+      <html lang="en">
+        {/* add the font to the body tag */}
+        <body className={inter.className}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

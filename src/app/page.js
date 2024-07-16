@@ -5,8 +5,6 @@ import coasterRoller from "@/../public/coasterRoller.jpg";
 
 //import the popover demo component
 import PopoverDemo from "@/components/PopoverDemo";
-import { Toast } from "@radix-ui/react-toast";
-import ToastComponent from "@/components/Toast";
 
 export default function Home() {
   return (
@@ -20,7 +18,6 @@ export default function Home() {
         height={200}
       ></Image>
       <PopoverDemo />
-      <ToastComponent />
       <Image
         alt="coaster roller"
         src={coasterRoller}
